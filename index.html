@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ร้านอะไหล่มอเตอร์ไซค์ นครสวรรค์</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700;800&family=Sarabun:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#ECEEEB; --surface:#F7F8F6; --ink:#1B2A33; --muted:#53636B;
+  --line:#C9D0CC; --accent:#D8401F; --accent-ink:#FFFFFF;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#151D22; --surface:#1F2A31; --ink:#EEF1EE; --muted:#9FB0B8;
+    --line:#33434C; --accent:#F0603F; --accent-ink:#1B1008; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151D22; --surface:#1F2A31; --ink:#EEF1EE; --muted:#9FB0B8;
+  --line:#33434C; --accent:#F0603F; --accent-ink:#1B1008; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Sarabun","Noto Sans Thai",sans-serif;font-size:18px;line-height:1.7}
+h1,h2,h3{font-family:"Prompt","Sarabun",sans-serif;line-height:1.25;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* hero */
+.hero{padding:56px 0 40px;border-bottom:2px solid var(--ink)}
+.hero .loc{font-weight:600;color:var(--muted);margin:0 0 12px}
+.hero h1{font-size:clamp(2.4rem,9vw,4.6rem);font-weight:800;letter-spacing:-.01em;max-width:14ch}
+.hero p.lead{max-width:34em;margin:20px 0 28px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-family:"Prompt",sans-serif;font-weight:700;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+h2{font-size:1.7rem;font-weight:700;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 24px;max-width:36em}
+
+/* parts list as a price-board */
+.parts{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.parts li{display:grid;grid-template-columns:minmax(0,11rem) 1fr;gap:6px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+.parts b{font-family:"Prompt",sans-serif;font-weight:700}
+.parts span{color:var(--muted)}
+@media (max-width:560px){.parts li{grid-template-columns:1fr}}
+
+/* brands */
+.brands{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.brands li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 16px;font-family:"Prompt",sans-serif;font-weight:500}
+
+/* reasons */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.why p{margin:6px 0 0;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.contact dt{font-family:"Prompt",sans-serif;font-weight:700}
+.contact dd{margin:2px 0 0;color:var(--muted)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1{animation:rise .6s ease-out both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="loc">นครสวรรค์</p>
+    <h1>อะไหล่มอเตอร์ไซค์ ครบ ตรงรุ่น</h1>
+    <p class="lead">ร้านอะไหล่มอเตอร์ไซค์ในตัวเมืองนครสวรรค์ มีทั้งอะไหล่แท้และอะไหล่เทียบคุณภาพดี ราคาเป็นกันเอง บอกรุ่นรถกับอาการ เราช่วยเลือกให้ตรงกับที่ใช้</p>
+    <div class="btns">
+      <a class="btn primary" href="tel:0800000000">โทรสอบถามอะไหล่</a>
+      <a class="btn" href="#contact">ดูที่ตั้งร้าน</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>สินค้าในร้าน</h2>
+    <p class="sub">ของที่ช่างและลูกค้าประจำมาซื้อบ่อยที่สุด ไม่มีในรายการก็ถามได้ เราสั่งให้</p>
+    <ul class="parts">
+      <li><b>น้ำมันเครื่อง</b><span>ทั้งแบบธรรมดาและกึ่งสังเคราะห์ ยี่ห้อที่ผู้ผลิตรถแนะนำ</span></li>
+      <li><b>ผ้าเบรก / จานเบรก</b><span>หน้า-หลัง ตรงรุ่น เปลี่ยนแล้วเบรกจับดี</span></li>
+      <li><b>โซ่ สเตอร์ ชุดสายพาน</b><span>ทั้งรถเกียร์และรถออโตเมติก</span></li>
+      <li><b>ยาง ยางใน</b><span>ขอบ 14–17 มีหลายยี่ห้อให้เลือก</span></li>
+      <li><b>แบตเตอรี่ หัวเทียน</b><span>สตาร์ตติดง่าย ไฟแรงสม่ำเสมอ</span></li>
+      <li><b>ไส้กรอง ชุดไฟ หลอดไฟ</b><span>ไส้กรองอากาศ ไฟหน้า ไฟเลี้ยว ไฟท้าย</span></li>
+      <li><b>ชุดสี แฟริ่ง กระจก</b><span>ของแต่งและอะไหล่ตัวถัง</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>รุ่นรถที่มีอะไหล่</h2>
+    <p class="sub">รถที่คนนครสวรรค์ใช้กันมาก มีอะไหล่พร้อมส่ง</p>
+    <ul class="brands">
+      <li>Honda Wave</li><li>Honda Click</li><li>Honda Scoopy</li><li>Honda PCX</li>
+      <li>Yamaha Fino</li><li>Yamaha Mio</li><li>Yamaha NMAX</li>
+      <li>Suzuki Smash</li><li>Kawasaki</li><li>รถไฟฟ้า</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>ทำไมต้องซื้อกับเรา</h2>
+    <div class="why" style="margin-top:20px">
+      <div><h3>เลือกอะไหล่ให้ตรงรุ่น</h3><p>เล่ารุ่นรถและอาการมา เราช่วยดูให้ ซื้อผิดรุ่นเปลี่ยนให้ได้</p></div>
+      <div><h3>ราคาชัดเจน</h3><p>บอกราคาทั้งอะไหล่แท้และเทียบ ให้เลือกตามงบ</p></div>
+      <div><h3>ขายส่งให้ร้านซ่อม</h3><p>ช่างและร้านซ่อมในจังหวัดสั่งเป็นจำนวนได้ในราคาพิเศษ</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:0">
+  <div class="wrap">
+    <h2>ติดต่อร้าน</h2>
+    <p class="sub">แวะมาที่ร้านหรือโทรถามสต็อกก่อนได้</p>
+    <dl class="contact">
+      <div><dt>ที่ตั้ง</dt><dd>123 ถนนสวรรค์วิถี ตำบลปากน้ำโพ อำเภอเมือง จังหวัดนครสวรรค์ 60000</dd></div>
+      <div><dt>เวลาเปิด</dt><dd>จันทร์–เสาร์ 08:00–18:00 น.<br>อาทิตย์ 09:00–15:00 น.</dd></div>
+      <div><dt>โทรศัพท์</dt><dd><a href="tel:0800000000">080-000-0000</a></dd></div>
+      <div><dt>LINE</dt><dd>@ร้านอะไหล่ของคุณ</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© ร้านอะไหล่มอเตอร์ไซค์ นครสวรรค์</div></footer>
+</body>
+</html>
